@@ -1,0 +1,33 @@
+Console.WriteLine("Eded ortanin tapilmasi ucun ededleri daxil edin: ( daxil etmeni dayandirmaq ucun stop yaz)");
+string word = "stop";
+int count = 1;
+double average = 0;
+double sum = 0;
+bool check= false;
+double number= 0;
+do 
+{
+	Console.WriteLine(count+". eded : ");
+	word = Console.ReadLine();
+	if(count== 1 && word == "stop")
+	{
+		Console.WriteLine("Hec bir eded daxil etmediyiniz ucun ededi orta 0 dir");
+		check=true;
+		break;
+		
+	}
+	if (word != "stop")
+	{
+		number=double.Parse(word);
+		sum += number;
+	    count++;
+       
+	}
+	else
+	{
+		check= true;
+		average = sum / (count-1);
+		Console.WriteLine("Ededi orta: "+average);
+	}
+}while(check==false);
+
